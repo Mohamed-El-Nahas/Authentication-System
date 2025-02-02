@@ -28,6 +28,7 @@ app.use(
 
 // API END-POINTS
 app.get('/', (req, res) => res.send("SERVER RUNING AT PORT - 5000"));
+app.use(cors());
 app.use('/api/auth', authRouter)
 app.use('/api/user', userRouter)
 
