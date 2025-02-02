@@ -1,6 +1,9 @@
 import express from 'express';
 import { isAuthenticated, login, logout, register, resetPassword, sendResetOtp, sendVerifyOtp, verifyEmail } from '../controllers/authController.js';
 import userAuth from '../middleware/userAuth.js';
+import cors from "cors";
+
+app.use(cors());
 
 const authRouter = express.Router();
 
