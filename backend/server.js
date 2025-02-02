@@ -12,7 +12,7 @@ connectDB();
 
 const allowedOrigins = [
     'http://localhost:5173', // Local development
-    'https://authentication-system-frontend-nine.vercel.app' // Production
+    'https://authentication-system-front-end.vercel.app' // Production
 ];
 
 app.use(express.json());
