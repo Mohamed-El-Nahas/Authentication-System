@@ -10,7 +10,10 @@ const app = express();
 const port = process.env.PORT || 5000
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = [
+    'http://localhost:5173', // Local development
+    'https://authentication-system-frontend-nine.vercel.app' // Production
+];
 
 app.use(express.json());
 app.use(cookieParser());
