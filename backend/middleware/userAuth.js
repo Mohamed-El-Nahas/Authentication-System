@@ -4,12 +4,6 @@ const userAuth = async (req, res, next) => {
 
     const {token} = req.cookies
 
-    res.cookie('token', token, {
-     httpOnly: true,
-     secure: true,  
-     sameSite: 'None', 
-});
-
     if (!token) {
         return res.json({success: false, message: 'Not Authorized. Login Again'})
     }
