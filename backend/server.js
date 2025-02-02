@@ -17,7 +17,13 @@ const allowedOrigins = [
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: allowedOrigins ,credentials: true}));
+app.use(
+  cors({
+    origin: "https://authentication-system-front-end.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
 
 
 // API END-POINTS
